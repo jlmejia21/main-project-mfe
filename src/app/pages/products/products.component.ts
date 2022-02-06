@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'main-products',
-  template: `
-    <app-products *axLazyElement="elementUrl" ></app-products>
-    <!-- <app-products></app-products> -->
-  `
+  template: `<app-products *axLazyElement="elementUrl"></app-products>`
 })
 export class ProductsComponent {
 
-  elementUrl = "http://127.0.0.1:5500/products.js"
+  elementUrl = environment.mf_products;
 
 }
